@@ -15,12 +15,15 @@ public class Lecture8_2 extends BaseTest {
                 .open();
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void dynamicLoading_Test() {
         new Navigation()
                 .navigateTo(DYNAMIC_LOADING);
-        String result = new DynamicLoadingPage().clickOnExample("Example 1").pageIsLoaded();
-
+        String result = new DynamicLoadingPage()
+                .clickOnExample("Example 1")
+                .clickOnStart()
+                .pageIsLoaded();
+        
         System.out.println(result);
     }
 
@@ -38,7 +41,7 @@ public class Lecture8_2 extends BaseTest {
         new ContextMenuPage().clickContext().verifyAlert("You selected a context menu");
     }
 
-    @Test
+    @Test (enabled = false)
     public void FrameTest() {
         new Navigation()
                 .navigateTo(FRAMES);

@@ -25,7 +25,6 @@ public class DynamicLoadingPage extends BasePage {
     }
     public String pageIsLoaded() {
         wait.until(ExpectedConditions.textToBe(loading, "Loading"));
-        //actions.
         return getText(loading);
     }
 }
