@@ -15,7 +15,7 @@ public class Lecture8_2 extends BaseTest {
                 .open();
     }
 
-    @Test (enabled = true)
+    @Test (enabled = false)
     public void dynamicLoading_Test() {
         new Navigation()
                 .navigateTo(DYNAMIC_LOADING);
@@ -23,11 +23,12 @@ public class Lecture8_2 extends BaseTest {
                 .clickOnExample("Example 1")
                 .clickOnStart()
                 .pageIsLoaded();
-        
+
+
         System.out.println(result);
     }
 
-    @Test (enabled = false)
+    @Test (enabled = true)
     public void scrollPageTest() {
         new Navigation()
                 .navigateTo(INFINITE_SCROLL);

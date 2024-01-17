@@ -1,4 +1,4 @@
-package Lecture6;
+package Lecture7;
 
 import driver.SimpleDriver;
 import org.openqa.selenium.By;

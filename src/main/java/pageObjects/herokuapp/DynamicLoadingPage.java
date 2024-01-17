@@ -1,6 +1,7 @@
 package pageObjects.herokuapp;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pageObjects.baseObjects.BasePage;
@@ -20,7 +21,8 @@ public class DynamicLoadingPage extends BasePage {
         return this;
     }
     public  DynamicLoadingPage clickOnStart() {
-        click(startBtn);
+        actions.click(driver.findElement(startBtn)).build().perform();
+        //click(startBtn);
         return this;
     }
     public String pageIsLoaded() {
